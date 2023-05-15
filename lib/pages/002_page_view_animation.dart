@@ -22,13 +22,11 @@ class _PageViewAnimationState extends State<PageViewAnimation>
     _controller = PageController(
       initialPage: 0,
     )..addListener(_onScroll);
-    // TODO: implement initState
     super.initState();
   }
 
   @override
   void dispose() {
-    // TODO: implement dispose
     _controller.dispose();
     super.dispose();
   }
