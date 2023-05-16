@@ -3,6 +3,7 @@ import 'package:flutter_ui_collection/features/catch_error_page.dart';
 import 'package:flutter_ui_collection/pages/001_inspiration_app_ui.dart';
 import 'package:flutter_ui_collection/pages/002_page_view_animation.dart';
 import 'package:flutter_ui_collection/pages/003_food_delivery.dart';
+import 'package:flutter_ui_collection/pages/004_user_profile.dart';
 import 'package:flutter_ui_collection/pages/029_on_boarding_design.dart';
 
 // can not understand
@@ -20,6 +21,10 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final actions = [
+      ElevatedButton(
+        onPressed: () => context.push(const UserProfile()),
+        child: const Text('Lesson 4 UserProfile And Animation'),
+      ),
       ElevatedButton(
         onPressed: () => context.push(const OnBoardingDesign()),
         child: const Text('On Boarding Design'),
