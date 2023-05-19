@@ -4,7 +4,11 @@ import 'package:flutter_ui_collection/pages/001_inspiration_app_ui.dart';
 import 'package:flutter_ui_collection/pages/002_page_view_animation.dart';
 import 'package:flutter_ui_collection/pages/003_food_delivery.dart';
 import 'package:flutter_ui_collection/pages/004_user_profile.dart';
+import 'package:flutter_ui_collection/pages/005_ripple_animation.dart';
+import 'package:flutter_ui_collection/pages/006_make_page_transition.dart';
 import 'package:flutter_ui_collection/pages/029_on_boarding_design.dart';
+
+import 'app/music_player.dart';
 
 // can not understand
 extension NavigatorExtension on BuildContext {
@@ -21,6 +25,18 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final actions = [
+      ElevatedButton(
+        onPressed: () => context.push(const MakePageTransition()),
+        child: const Text('Lesson 6 Make Page Transition'),
+      ),
+      ElevatedButton(
+        onPressed: () => context.push(const MusicPlayer()),
+        child: const Text('Music player'),
+      ),
+      ElevatedButton(
+        onPressed: () => context.push(const RippleAnimation()),
+        child: const Text('Lesson 5  Ripple Animation'),
+      ),
       ElevatedButton(
         onPressed: () => context.push(const UserProfile()),
         child: const Text('Lesson 4 UserProfile And Animation'),
