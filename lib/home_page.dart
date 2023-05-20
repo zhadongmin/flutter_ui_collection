@@ -6,6 +6,7 @@ import 'package:flutter_ui_collection/pages/003_food_delivery.dart';
 import 'package:flutter_ui_collection/pages/004_user_profile.dart';
 import 'package:flutter_ui_collection/pages/005_ripple_animation.dart';
 import 'package:flutter_ui_collection/pages/006_make_page_transition.dart';
+import 'package:flutter_ui_collection/pages/007_download_button_with_animation.dart';
 import 'package:flutter_ui_collection/pages/029_on_boarding_design.dart';
 
 import 'app/music_player.dart';
@@ -25,6 +26,10 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final actions = [
+      ElevatedButton(
+        onPressed: () => context.push(const DownloadButtonPage()),
+        child: const Text('Lesson 7 Download Button With Animation'),
+      ),
       ElevatedButton(
         onPressed: () => context.push(const MakePageTransition()),
         child: const Text('Lesson 6 Make Page Transition'),
